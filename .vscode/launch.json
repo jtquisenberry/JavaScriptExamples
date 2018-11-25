@@ -7,6 +7,16 @@
         {
             "type": "node",
             "request": "launch",
+            "name": "Launch current file w/ ts-node",
+            "protocol": "inspector",
+            "args": ["${relativeFile}"],
+            "cwd": "${workspaceRoot}",
+            "runtimeArgs": ["-r", "ts-node/register"],
+            "internalConsoleOptions": "openOnSessionStart"
+        },
+        {
+            "type": "node",
+            "request": "launch",
             "name": "Launch Program",
             "program": "${file}",
             "outFiles": [
